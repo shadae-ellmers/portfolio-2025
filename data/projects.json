@@ -1,0 +1,23 @@
+[
+  {
+    "imageSrc": "/images/hollie-ellmers-photography.png",
+    "title": "Hollie Ellmers Photography",
+    "description": "A website showcasing a photography business, allowing visitors to browse galleries and submit contact inquiries seamlessly.",
+    "tech": ["Nextjs", "React", "TypeScript", "VercelBlob", "Tailwind"],
+    "repo": "https://github.com/shadae-ellmers/hollie-ellmers-photography",
+    "link": "https://www.hollieellmers.photography/"
+  },
+  {
+    "imageSrc": "/images/pingpong.png",
+    "title": "PingPong",
+    "description": "An app to kill your group chat and connect in person by sending a notification to friends when you want to spontaneously hang out.",
+    "tech": ["React Native", "TypeScript", "SQLite", "Express", "Node.js", "Jest", "Redux", "Auth0"],
+    "repo": "https://github.com/shadae-ellmers?tab=repositories&q=pingpong&type=&language=&sort="
+  },
+  {
+    "title": "SilverStripe Solr Search Module",
+    "description": "Enhanced site search functionality by improving indexing and search features, making content easier to find for users.",
+    "tech": ["React Native", "TypeScript", "SQLite", "Express", "Node.js", "Jest", "Redux", "Auth0"],
+    "repo": "https://github.com/signify-nz/silverstripe-solr-search/commits/4.x/?author=sig-shadae"
+  }
+]

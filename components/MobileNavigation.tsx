@@ -13,10 +13,17 @@ export default function MobileNavigation() {
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
+  const navLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' },
+  ]
+
   return (
     <div
       className={`w-full bg-red-50 ${
-        isOpen ? '' : 'shadow-md shadow-neutral-800/10 '
+        isOpen ? '' : 'shadow-md shadow-brandBlack/10 '
       }`}
     >
       <div className="flex flex-row justify-between px-5 py-4">
@@ -27,16 +34,16 @@ export default function MobileNavigation() {
               alt=""
               width="40"
               height="40"
-              loading="lazy"
+              priority
             />
           </div>
-          <h1 className="font-semibold pr-4 text-3xl flex flex-row my-auto justify-start">
+          <h1 className="font-semibold pr-4 text-2xl sm:text-3xl flex flex-row my-auto justify-start">
             Shadae Ellmers
           </h1>
         </div>
         <button
           onClick={toggleMenu}
-          className="text-red-50 bg-neutral-800 rounded-full my-auto p-2 cursor-pointer hover:bg-red-400 hover:text-neutral-800"
+          className="text-red-50 bg-brandBlack rounded-full my-auto p-2 cursor-pointer hover:bg-brandRed hover:text-brandCream focus:bg-brandRed focus:text-brandCream"
           aria-label={`${isOpen ? 'Close navigation' : 'Open navigation'}`}
         >
           {isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -45,42 +52,19 @@ export default function MobileNavigation() {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } md:hidden bg-red-50 relative w-full space-y-4 py-5 shadow-md shadow-neutral-800/10`}
+        } lg:hidden bg-red-50 relative w-full space-y-4 py-5 shadow-md shadow-brandBlack/10`}
         aria-hidden={isOpen ? 'false' : 'true'}
       >
-        <div className="flex flex-col justify-center gap-6 font-medium">
-          <Link
-            className="text-2xl bg-neutral-800 py-2 px-5 mx-auto text-red-50 rounded-full hover:text-neutral-800 hover:bg-red-400"
-            href="/"
-          >
-            Home
-          </Link>
-          <Link
-            className="text-2xl bg-neutral-800 py-2 px-5 mx-auto text-red-50 rounded-full hover:text-neutral-800 hover:bg-red-400"
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            className="text-2xl bg-neutral-800 py-2 px-5 mx-auto text-red-50 rounded-full hover:text-neutral-800 hover:bg-red-400"
-            href="/about"
-          >
-            About
-          </Link>
-        </div>
-        <div className="flex flex-row justify-center gap-6 pt-5 pb-10">
-          <button
-            aria-label="Open LinkedIn account"
-            className="fill-white flex flex-col justify-center my-auto cursor-pointer p-3 rounded-full bg-neutral-800 hover:bg-red-400 hover:fill-neutral-800"
-          >
-            <LinkedInIcon />
-          </button>
-          <button
-            aria-label="Open GitHub account"
-            className="fill-white flex flex-col justify-center my-auto cursor-pointer p-3 rounded-full bg-neutral-800 hover:bg-red-400 hover:fill-neutral-800"
-          >
-            <GithubIcon />
-          </button>
+        <div className="flex flex-col md:flex-row justify-center gap-6 font-medium">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-2xl bg-brandBlack py-2 px-5 mx-auto md:mx-0 text-red-50 rounded-full hover:text-brandCream hover:bg-brandRed focus:text-brandCream focus:bg-brandRed"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

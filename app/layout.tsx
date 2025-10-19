@@ -17,14 +17,14 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕸️</text></svg>"
         />
       </head>
-      <body className={`antialiased`}>
-        <header className="absolute top-0 left-0 w-full z-50">
+      <body id="home" className={`antialiased`}>
+        <header className="w-full z-50 fixed">
           <Navigation />
         </header>
-        <main className="text-olive text-md">{children}</main>
+        <main className="text-md">{children}</main>
         {/* <Footer /> */}
       </body>
     </html>
