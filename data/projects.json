@@ -1,0 +1,21 @@
+[
+  {
+    "imageSrc": "/images/hollie-ellmers-photography.png",
+    "title": "Hollie Ellmers Photography",
+    "description": "A website showcasing a photography business, allowing visitors to browse galleries and submit contact inquiries seamlessly.",
+    "repo": "https://github.com/shadae-ellmers/hollie-ellmers-photography",
+    "link": "https://www.hollieellmers.photography/"
+  },
+  {
+    "imageSrc": "/images/fitness-tracker.png",
+    "title": "Fitness Tracker",
+    "description": "A website to track my progress with strength training. This is currently only available for authenticated users added by me.",
+    "repo": "https://github.com/shadae-ellmers/fitness-tracker"
+  },
+  {
+    "imageSrc": "/images/pingpong.png",
+    "title": "PingPong",
+    "description": "An app to kill your group chat and connect in person by sending a notification to friends when you want to spontaneously hang out.",
+    "repo": "https://github.com/shadae-ellmers?tab=repositories&q=pingpong&type=&language=&sort="
+  }
+]
