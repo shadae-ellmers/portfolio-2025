@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'Shadae Ellmers',
@@ -25,7 +26,7 @@ export default function RootLayout({
           <Navigation />
         </header>
         <main className="text-md">{children}</main>
-        {/* <Footer /> */}
+        <Analytics />
       </body>
     </html>
   )
