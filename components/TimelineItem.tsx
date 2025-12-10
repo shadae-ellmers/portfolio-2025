@@ -29,9 +29,9 @@ export default function TimelineItem({
         {title === 'Career' && <BriefcaseIcon />}
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
-      <span className="text-sm ">{date}</span>
-      <p className="mt-1">{description}</p>
+      <h4 className="font-semibold">{description}</h4>
       <p className="mt-1">{location}</p>
+      <span className="mt-1 text-sm">{date}</span>
     </div>
   )
 }
