@@ -4,6 +4,8 @@ import projects from '../data/projects.json'
 import React from 'react'
 import GithubIcon from './GithubIcon'
 import ExternalLinkIcon from './ExternalLinkIcon'
+import Link from 'next/link'
+import ArrowRightIcon from './ArrowRightIcon'
 
 export default function Projects() {
   return (
@@ -16,7 +18,7 @@ export default function Projects() {
         {projects.map((item: any, index: number) => (
           <div
             key={index}
-            className="w-full max-w-[360px] rounded bg-red-50 flex flex-col shadow-lg"
+            className="w-full max-w-[360px] rounded bg-brandCream flex flex-col shadow-lg"
           >
             <div className="max-w-[360px] overflow-hidden h-[85%] bg-brandRed">
               {item.imageSrc ? (
@@ -70,6 +72,15 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      <Link
+        href="/projects"
+        className="flex flex-row justify-center text-3xl font-semibold my-8 text-brandCream group items-center transition-colors duration-300"
+      >
+        View more
+        <div className="pl-4 transition-transform duration-300 group-hover:translate-x-3 group-focus:translate-x-3 fill-brandCream h-full">
+          <ArrowRightIcon />
+        </div>
+      </Link>
     </div>
   )
 }

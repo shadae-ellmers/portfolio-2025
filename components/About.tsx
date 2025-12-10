@@ -3,33 +3,7 @@
 import CareerTimeline from './CareerTimeline'
 import MobileTimeline from './MobileTimeline'
 import useIsMobile from './useIsMobile'
-
-const timelineData = [
-  {
-    date: 'July 2025',
-    title: 'Career',
-    description: 'Intermediate Full Stack Software Developer',
-    location: 'Signify Limited',
-  },
-  {
-    date: 'July 2023',
-    title: 'Career',
-    description: 'Junior Full Stack Software Developer',
-    location: 'Signify Limited',
-  },
-  {
-    date: 'May 2023',
-    title: 'Education',
-    description: 'New Zealand Certificate in Applied Software Development',
-    location: 'Dev Academy Aotearoa',
-  },
-  {
-    date: 'February 2022',
-    title: 'Education',
-    description: 'Bachelor of Biomedical Science in Molecular Pathology',
-    location: 'Victoria University of Wellington',
-  },
-]
+import timelineData from '../data/timeline.json'
 
 export default function About() {
   const isMobile = useIsMobile()

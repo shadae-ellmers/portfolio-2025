@@ -9,16 +9,16 @@ export default function Navigation() {
   const isTablet = useIsTablet()
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
     <nav
       className={` text-brandBlack  flex flex-row justify-between shadow-lg ${
-        isTablet ? 'bg-transparent' : 'px-5 py-4 bg-red-50'
+        isTablet ? 'bg-transparent' : 'px-5 py-4 bg-brandCream'
       }`}
     >
       {isTablet ? (
@@ -45,7 +45,7 @@ export default function Navigation() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-xl lg:text-2xl bg-brandBlack py-2 px-5 my-auto text-red-50 rounded-full hover:text-brandCream hover:bg-brandRed focus:text-brandCream focus:bg-brandRed"
+                className="text-xl lg:text-2xl bg-brandBlack py-2 px-5 my-auto text-brandCream rounded-full hover:text-brandCream hover:bg-brandRed focus:text-brandCream focus:bg-brandRed"
               >
                 {link.name}
               </Link>

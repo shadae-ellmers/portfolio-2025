@@ -4,8 +4,6 @@ import { useState } from 'react'
 import HamburgerIcon from './HamburgerIcon'
 import CloseIcon from './CloseIcon'
 import Link from 'next/link'
-import LinkedInIcon from './LinkedInIcon'
-import GithubIcon from './GithubIcon'
 import Image from 'next/image'
 
 export default function MobileNavigation() {
@@ -14,15 +12,15 @@ export default function MobileNavigation() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
     <div
-      className={`w-full bg-red-50 ${
+      className={`w-full bg-brandCream ${
         isOpen ? '' : 'shadow-md shadow-brandBlack/10 '
       }`}
     >
@@ -43,7 +41,7 @@ export default function MobileNavigation() {
         </div>
         <button
           onClick={toggleMenu}
-          className="text-red-50 bg-brandBlack rounded-full my-auto p-2 cursor-pointer hover:bg-brandRed hover:text-brandCream focus:bg-brandRed focus:text-brandCream"
+          className="text-brandCream bg-brandBlack rounded-full my-auto p-2 cursor-pointer hover:bg-brandRed hover:text-brandCream focus:bg-brandRed focus:text-brandCream"
           aria-label={`${isOpen ? 'Close navigation' : 'Open navigation'}`}
         >
           {isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -52,7 +50,7 @@ export default function MobileNavigation() {
       <div
         className={`${
           isOpen ? 'block' : 'hidden'
-        } lg:hidden bg-red-50 relative w-full space-y-4 py-5 shadow-md shadow-brandBlack/10`}
+        } lg:hidden bg-brandCream relative w-full space-y-4 py-5 shadow-md shadow-brandBlack/10`}
         aria-hidden={isOpen ? 'false' : 'true'}
       >
         <div className="flex flex-col md:flex-row justify-center gap-6 font-medium">
@@ -60,7 +58,8 @@ export default function MobileNavigation() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-2xl bg-brandBlack py-2 px-5 mx-auto md:mx-0 text-red-50 rounded-full hover:text-brandCream hover:bg-brandRed focus:text-brandCream focus:bg-brandRed"
+              onClick={() => setIsOpen(false)}
+              className="text-2xl bg-brandBlack py-2 px-5 mx-auto md:mx-0 text-brandCream rounded-full hover:text-brandCream hover:bg-brandRed focus:text-brandCream focus:bg-brandRed"
             >
               {link.name}
             </Link>

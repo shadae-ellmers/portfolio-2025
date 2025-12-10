@@ -19,7 +19,7 @@ export default function TimelineItem({
   position,
 }: ItemProps) {
   return (
-    <div className="bg-red-50 p-4 rounded shadow-lg inline-block text-brandBlack">
+    <div className="bg-brandCream p-4 rounded shadow-lg inline-block text-brandBlack">
       <div
         className={`w-full pb-2 flex ${
           position === 'right' ? 'justify-end' : 'justify-start'
