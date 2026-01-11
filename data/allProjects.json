@@ -10,7 +10,7 @@
   {
     "imageSrc": "/images/fitness-tracker.png",
     "title": "Fitness Tracker",
-    "description": "A website to track my progress with strength training. This is currently only available to view for authenticated users added by me.",
+    "description": "A website to track my progress with strength training.",
     "tech": ["Nextjs", "React", "TypeScript", "Postgres", "Prisma", "Auth0"],
     "repo": "https://github.com/shadae-ellmers/fitness-tracker",
     "link": "https://fitness-tracker.shadae-ellmers.dev"
